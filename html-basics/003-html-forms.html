@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms</title>
+</head>
+<body>
+  <main>
+    <!-- Form elements -->
+    <form>
+      <fieldset>
+        <legend>Cities you've visited (pick as many as you like)</legend>
+        <label>
+          <input type="checkbox" />
+          Manchester
+        </label>
+        <label>
+          <input type="checkbox" />
+          Liverpool
+        </label>
+        <label>
+          <input type="checkbox" />
+          London
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Your gender</legend>
+        <label>
+          <input type="radio" name="gender" value="female" />
+          Female
+        </label>
+        <label>
+          <input type="radio" name="gender" value="male" />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="not-say" />
+          Rather not say
+        </label>
+      </fieldset>
+      <div>
+        <label for="nameField">Your name</label>
+        <input id="nameField" type="text" />
+      </div>
+      <div>
+        <label for="emailField">Your email address</label>
+        <input id="emailField" type="email" />
+      </div>
+      <div>
+        <label for="passwordField">Your password</label>
+        <input id="passwordField" type="password" />
+      </div>
+      <label for="selectField">Select dropdown</label>
+      <select id="selectField">
+        <option>Blue</option>
+        <option>Red</option>
+        <option>Green</option>
+        <option>Yellow</option>
+      </select>
+    </form>
+  </main>
+</body>
+</html>

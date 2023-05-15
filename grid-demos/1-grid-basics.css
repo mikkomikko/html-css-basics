@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.square {
+  background-color: #d54f92;
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box {
+  width: 300px;
+  background-color: #d54f92;
+  padding: 2rem;
+}

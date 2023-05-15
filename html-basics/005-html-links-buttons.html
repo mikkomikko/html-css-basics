@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Links and buttons</title>
+  <link rel="stylesheet" href="links.css">
+</head>
+<body>
+  <main>
+    <!-- Anchor tag for hyperlinks -->
+    <a href="https://www.google.fi" target="_blank">Google</a>
+    <!-- Link inside this same page -->
+    <a href="#section-id">Show me</a>
+
+    <!-- Wrap another element inside the anchor tag -->
+    <a href="https://developer.mozilla.org/en-US/">
+      <h1>MDN Web Docs</h1>
+    </a>
+
+    <!-- Images can be links too -->
+    <a href="https://developer.mozilla.org/en-US/">
+      <img src="images/arrow-right-circle.svg" alt="MDN Web Docs homepage" />
+    </a>
+
+    <!-- Accessibility tips for links -->
+    <!-- Underline your links -->
+    <!-- Use clear wording: avoid "Read more" or "here" -->
+    <!-- Screen readers can access links directly so they might appear out of context -->
+
+    <!-- Make email and phone number as links -->
+    <a href="mailto:mikko.suominen@me.com">mikko.suominen@me.com</a>
+    <a href="tel:5554280940">Call us at 555-428-0940</a>
+    
+    <!-- How not to do a link (why semantics matter) -->
+    <!-- Can't right click -->
+    <!-- Can't focus with keyboard -->
+    <div onclick="window.open('https://www.google.fi')">
+      Fake link to Google
+    </div>
+
+    <!-- If you're using javascript, button is your choice -->
+    <button onclick="alert('You clicked a button')">Click me!</button>
+  </main>
+  <footer id="section-id">
+    <p>👋 Hello!</p>
+  </footer>
+</body>
+</html>

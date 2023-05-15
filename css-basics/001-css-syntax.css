@@ -1,0 +1,55 @@
+/* Change the color of a text */
+
+/* p => selector */
+/* color => property */
+/* #9f0a0a => property value */
+/* color: #9f0a0a; => declaration */
+
+p {
+  color: #9f0a0a;
+}
+
+/* To modify multiple property values in one ruleset, */
+/* write them separated by semicolons, like this: */
+/* each declaration on it's own line please :) */
+.my-div {
+  color: hotpink;
+  width: 500px;
+  border: 1px solid black;
+}
+
+/* Access elements directly with their html tags */
+main { }
+/* Through classes (with .class-name) */
+.my-div {}
+/* Through id's (with #id-name) */
+#my-id {}
+/* The element(s) on the page with the specified attribute. */
+/* The following would select <img src="" /> but not <img> */
+img[src] {}
+/* Pseudo-class selector */
+a:hover {
+  text-decoration: none;
+  color: #0d0461;
+}
+
+
+/* Selecting multiple elements */
+p,
+li,
+h1 {
+  
+}
+
+
+/* CSS is inherited */
+/* Some rules (not all) written for the body tag */
+/* will be inherited by all of it's child elements */
+body {
+  
+}
+
+/* Chaining and specificity */
+body main p {
+
+}

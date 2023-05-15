@@ -1,0 +1,16 @@
+/* Box sizing by default for all elements is: content-box */
+/* Target all elements with the *-symbol */
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 200px;
+  padding: 20px;
+  margin: 40px;
+  background-color: #f0f0f0;
+}
+
+.another-box {
+  background-color: #ddd;
+}

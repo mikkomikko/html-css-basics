@@ -1,0 +1,9 @@
+main {
+  min-height: 100vh;
+}
+
+footer {
+  height: 100vh;
+  background-color: #e0dee3;
+  border-top: 1px solid #c9c8cc;
+}
