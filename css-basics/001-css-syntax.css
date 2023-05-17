@@ -9,6 +9,14 @@ p {
   color: #9f0a0a;
 }
 
+p.blue {
+  color: #1d2a9f;
+}
+
+#black {
+  color: #000;
+}
+
 /* To modify multiple property values in one ruleset, */
 /* write them separated by semicolons, like this: */
 /* each declaration on it's own line please :) */
@@ -46,10 +54,11 @@ h1 {
 /* Some rules (not all) written for the body tag */
 /* will be inherited by all of it's child elements */
 body {
-  
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.4;
 }
 
 /* Chaining and specificity */
 body main p {
-
+  
 }
