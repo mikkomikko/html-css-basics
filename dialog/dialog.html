@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog</title>
+    <style>
+      dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+
+      dialog {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 15px 25px hsla(0, 0%, 0%, 0.15),
+          0 5px 10px hsla(0, 0%, 0%, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <button data-open-modal>Open dialog</button>
+
+    <dialog data-modal>
+      <p>This is a modal.</p>
+      <button data-close-modal>Close</button>
+    </dialog>
+
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+    </script>
+  </body>
+</html>

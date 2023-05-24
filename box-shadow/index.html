@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box shadow</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --box-shadow-xs: 0 1px 3px hsla(0, 0%, 0%, 0.08),
+          0 1px 2px hsla(0, 0%, 0%, 0.12);
+        --box-shadow-s: 0 3px 6px hsla(0, 0%, 0%, 0.12),
+          0 2px 4px hsla(0, 0%, 0%, 0.1);
+        --box-shadow-m: 0 10px 20px hsla(0, 0%, 0%, 0.15),
+          0 3px 6px hsla(0, 0%, 0%, 0.08);
+        --box-shadow-l: 0 15px 25px hsla(0, 0%, 0%, 0.15),
+          0 5px 10px hsla(0, 0%, 0%, 0.3);
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #fff;
+        border-radius: 10px;
+        transition: all 0.25s ease-in-out;
+      }
+
+      .grid {
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(4, min-content);
+        margin: 3rem;
+      }
+
+      .shadow-xs {
+        box-shadow: var(--box-shadow-xs);
+      }
+
+      .shadow-s {
+        box-shadow: var(--box-shadow-s);
+      }
+
+      .shadow-m {
+        box-shadow: var(--box-shadow-m);
+      }
+
+      .shadow-l {
+        box-shadow: var(--box-shadow-l);
+      }
+
+      .shadow-xs:hover {
+        box-shadow: var(--box-shadow-m);
+        transform: translateY(-5px);
+      }
+
+      .shadow-s:hover {
+        box-shadow: var(--box-shadow-xs);
+        transform: translateY(5px);
+      }
+
+      .shadow-l:hover {
+        box-shadow: var(--box-shadow-xs);
+        transform: translateY(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="box shadow-xs"></div>
+      <div class="box shadow-s"></div>
+      <div class="box shadow-m"></div>
+      <div class="box shadow-l"></div>
+    </div>
+  </body>
+</html>

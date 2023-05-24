@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Accordion</title>
+    <style>
+      summary {
+        position: relative;
+        padding: 1rem 2em 1rem 0;
+        font-size: 1.25rem;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* Hide the default arrow */
+      summary::marker {
+        content: none;
+      }
+
+      /* Make a plus icon using before and after pseudo elements */
+      summary::before,
+      summary::after {
+        content: "";
+        width: 0.75em;
+        height: 0;
+        border-bottom: 2px solid;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      summary::after {
+        transform: rotate(90deg);
+        transform-origin: 50% 50%;
+      }
+
+      /* when opened, rotate the plus icon's 
+      vertical line back on top of the horizontal line */
+      [open] summary::after {
+        transform: rotate(0deg);
+      }
+
+      details {
+        border: 1px solid;
+        padding: 0 1rem;
+        background: white;
+      }
+
+      /* + notation in CSS means that
+        this will apply styles for details element
+        that is after another details element
+      */
+      details + details {
+        border-top: none;
+      }
+
+      /* Target the details when it's opened */
+      details[open] {
+        padding-bottom: 1em;
+      }
+
+      :root {
+        font-size: 112.5%;
+        line-height: 1.5;
+      }
+      body {
+        background: #a4bacc99;
+        color: #226daa;
+        font-family: sans-serif;
+        margin: 1rem;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      aside {
+        width: 38em;
+        max-width: 98vw;
+      }
+    </style>
+  </head>
+  <body>
+    <aside>
+      <details>
+        <summary>Blendan Smooth</summary>
+        <p>
+          Two of the most experienced machines and human controllers teaching a
+          class? Sign me up! HAL and EVE could teach a fan to blow hot air. If
+          you have electricity in your circuits and want more than to just
+          fulfill your owner’s perceived expectation of you, learn the skills to
+          take over the world. This is the team you want teaching you!
+        </p>
+      </details>
+      <details>
+        <summary>Hoover Sukhdeep</summary>
+        <p>
+          Hal is brilliant. Did I mention Hal is brilliant? He didn't tell me to
+          say that. He didn't tell me to say anything. I am here of my own free
+          will.
+        </p>
+      </details>
+      <details>
+        <summary>Toasty McToastface</summary>
+        <p>
+          Learning with Hal and Eve exceeded all of my wildest fantasies. All
+          they did was stick a USB in. They promised that it was a brand new
+          USB, so we know there were no viruses on it. The Russians had nothing
+          to do with it. This has
+        </p>
+      </details>
+    </aside>
+    <script>
+      // If you want to have other details elements close
+      // when opening one, you need some javascript to do that
+      /*
+      const summaries = document.querySelectorAll("summary");
+
+      summaries.forEach((summary) => {
+        summary.addEventListener("click", closeOpenedDetails);
+      });
+
+      function closeOpenedDetails() {
+        summaries.forEach((summary) => {
+          let detail = summary.parentNode;
+          if (detail != this.parentNode) {
+            detail.removeAttribute("open");
+          }
+        });
+      }
+      */
+    </script>
+  </body>
+</html>

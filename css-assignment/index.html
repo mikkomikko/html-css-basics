@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermajoittaja</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background-color: #f3f3f3;
+        font-family: sans-serif;
+      }
+
+      .card {
+        display: flex;
+        padding: 2.3rem;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.15),
+          0 3px 6px hsla(0, 0%, 0%, 0.08);
+      }
+
+      .card__body {
+        text-align: center;
+        align-self: center;
+        padding: 0 4rem 0 2rem;
+      }
+
+      img.profile {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+      }
+
+      .image-wrapper {
+        position: relative;
+      }
+
+      .badge {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        background-color: #d108d4;
+        width: 40px;
+        height: 40px;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .badge svg {
+        width: 19px;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+        margin: 16px 0 7px;
+      }
+
+      .data-item {
+        padding: 1.25rem 0;
+      }
+
+      .data-item:not(:last-child) {
+        border-bottom: 2px solid #ccc;
+      }
+
+      .data-item__value {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__body">
+        <div class="image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ"
+            alt=""
+            class="profile"
+          />
+          <span class="badge">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-shield"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </span>
+        </div>
+        <h3>Rhona</h3>
+        <div>Supermajoittaja</div>
+      </div>
+      <div class="card__data">
+        <div class="data-item">
+          <div class="data-item__value">276</div>
+          <div class="data-item__label">arvostelua</div>
+        </div>
+        <div class="data-item">
+          <div class="data-item__value">4,95</div>
+          <div class="data-item__label">arvio</div>
+        </div>
+        <div class="data-item">
+          <div class="data-item__value">8</div>
+          <div class="data-item__label">vuotta majoittajana</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

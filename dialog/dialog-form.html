@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog with form</title>
+    <style></style>
+  </head>
+  <body>
+    <button data-open-modal>Open dialog</button>
+
+    <dialog data-modal>
+      <!-- method="dialog" doesn't submit the form,
+         only closes the modal 
+    -->
+      <form method="dialog">
+        <!-- Get's auto focus once opened -->
+        <input type="text" />
+        <button type="submit">Send</button>
+      </form>
+    </dialog>
+
+    <script>
+      const openButton = document.querySelector("[data-open-modal]");
+      const closeButton = document.querySelector("[data-close-modal]");
+      const modal = document.querySelector("[data-modal]");
+
+      openButton.addEventListener("click", () => {
+        modal.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        modal.close();
+      });
+    </script>
+  </body>
+</html>

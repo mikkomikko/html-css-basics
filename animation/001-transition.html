@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+    <style>
+      .square {
+        width: 100px;
+        height: 100px;
+        background-color: turquoise;
+        border-radius: 8px;
+        margin-bottom: 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .square:hover {
+        transform: scale(1.4);
+        background-color: #054b60;
+      }
+
+      .square.has-transition {
+        transition: all 150ms ease-in-out;
+      }
+
+      .square span {
+        font-size: 1.5em;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Decorative styles */
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="square has-transition">
+        <span>Hover!</span>
+      </div>
+      <div>
+        <input type="checkbox" id="has-transition" checked />
+        <label for="has-transition">Transition enabled?</label>
+      </div>
+    </div>
+    <script>
+      const checkbox = document.querySelector("input");
+      const button = document.querySelector("button");
+      const square = document.querySelector(".square");
+
+      checkbox.addEventListener("change", ({ target }) => {
+        if (checkbox.checked) {
+          square.classList.add("has-transition");
+        } else {
+          square.classList.remove("has-transition");
+        }
+      });
+    </script>
+  </body>
+</html>
